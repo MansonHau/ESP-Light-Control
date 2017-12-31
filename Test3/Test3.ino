@@ -76,7 +76,14 @@ void loop() {
   client.println(""); //  do not forget this one
   client.println("<!DOCTYPE HTML>");
   client.println("<html>");
-   
+  client.println("<head>");
+  client.println("<style>");
+  client.println("p{");
+  client.println("color:red;");
+  client.println("}");
+  client.println("</style>");
+  client.println("</head>");
+    
   client.print("Device is now: ");
    
   if(value == HIGH) {
@@ -87,7 +94,6 @@ void loop() {
   client.println("<br><br>");
   client.println("Click <a href=\"/LED=ON\">here</a> turn the device ON<br>");
   client.println("Click <a href=\"/LED=OFF\">here</a> turn the device OFF<br>");
-  client.println("<style>")
   client.println("</html>");
  
   delay(1);
